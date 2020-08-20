@@ -1,0 +1,2 @@
+rootProject.name='NetworkSetting'
+include ':app'

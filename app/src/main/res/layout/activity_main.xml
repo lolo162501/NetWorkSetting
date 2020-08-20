@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030303"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/activityMain_typeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <RadioButton
+            android:id="@+id/activityMain_wifiRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@android:drawable/btn_radio"
+            android:drawablePadding="20dp"
+            android:text="WIFI"
+            android:textColor="#eeeeee"
+            android:textSize="16dp" />
+
+        <RadioButton
+            android:id="@+id/activityMain_EthernetRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@android:drawable/btn_radio"
+            android:drawablePadding="10dp"
+            android:text="ETHERNET"
+            android:textColor="#eeeeee"
+            android:textSize="16dp" />
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/activityMain_modeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <RadioButton
+            android:id="@+id/activityMain_dhcpRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@android:drawable/btn_radio"
+            android:drawablePadding="20dp"
+            android:text="DHCP"
+            android:textColor="#eeeeee"
+            android:textSize="16dp" />
+
+        <RadioButton
+            android:id="@+id/activityMain_staticRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@android:drawable/btn_radio"
+            android:drawablePadding="10dp"
+            android:text="STATIC"
+            android:textColor="#eeeeee"
+            android:textSize="16dp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="  IP 地址 : "
+            android:textColor="#eeeeee"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/activityMain_ipAddressEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxHeight="16dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="192.168.1.51"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#eeeeee" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="子網路遮罩 : "
+            android:textColor="#eeeeee"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/activityMain_maskEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxHeight="16dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="255.255.255.0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#eeeeee" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="閘道 : "
+            android:textColor="#eeeeee"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/activityMain_gatewayEditText"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxHeight="16dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="192.168.1.1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#eeeeee" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="DNS 1 :"
+            android:textColor="#eeeeee"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/activityMain_dns1EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxHeight="16dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="8.8.8.8"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#eeeeee" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="DNS 2 :"
+            android:textColor="#eeeeee"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/activityMain_dns2EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxHeight="16sp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="8.8.4.4"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#eeeeee" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activityMain_settingLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/activityMain_confirmButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="确定" />
+
+            <Button
+                android:id="@+id/activityMain_infoButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="資訊" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
